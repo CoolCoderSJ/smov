@@ -61,7 +61,6 @@ export async function singularProxiedFetch<T>(
   headers = {
     ...headers,
     "X-Origin": "https://sudo-flix.lol",
-    "Origin": "https://sudo-flix.lol",
   };
 
   return baseFetch<T>(proxyUrl, {
