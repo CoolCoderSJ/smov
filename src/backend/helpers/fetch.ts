@@ -58,8 +58,11 @@ export async function singularProxiedFetch<T>(
       "X-Token": apiToken,
     };
   
-  headers['X-Origin'] = "https://sudo-flix.lol";
-  headers['Origin'] = "https://sudo-flix.lol";
+  headers = {
+    ...headers,
+    "X-Origin": "https://sudo-flix.lol",
+    "Origin": "https://sudo-flix.lol",
+  };
 
   return baseFetch<T>(proxyUrl, {
     ...ops,
