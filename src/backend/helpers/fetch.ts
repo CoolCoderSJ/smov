@@ -57,7 +57,7 @@ export async function singularProxiedFetch<T>(
       ...headers,
       "X-Token": apiToken,
     };
-  
+
   headers = {
     ...headers,
     "X-Origin": "https://sudo-flix.lol",
