@@ -29,6 +29,7 @@ async function fetchButWithApiTokens(
 ): Promise<Response> {
   const apiToken = await getApiToken();
   const headers = new Headers(init?.headers);
+  headers.set("origin", "https://sudo-flix.lol")
   if (apiToken) headers.set("X-Token", apiToken);
   const response = await fetch(
     input,
